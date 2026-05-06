@@ -62,6 +62,7 @@ while run:
                     pygame.time.set_timer(TEXTDOWN, 1000)
                     pygame.time.set_timer(BEEPINTERVAL, int(current_interval))
                     text = str(countdown_time)
+                    led.on()
                 elif int(text) != code:
                     text = "Incorrect!"
                     pygame.time.set_timer(CLEARTEXT, 1000)
