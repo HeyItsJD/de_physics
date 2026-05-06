@@ -84,7 +84,7 @@ while run:
             current_interval = max(min_interval, int(current_interval * exponential_decay))
             pygame.time.set_timer(BEEPINTERVAL, int(current_interval))
             beep.play()
-            led.pulse(fade_in_time=(current_interval * 1000) /2 , fade_out_time=(current_interval * 1000) /2, n=None)
+            led.blink(on_time=0.1, off_time=0.1, n=1) # blinks the led once every beep
         elif event.type == CLEARTEXT:
             text = ""
             pygame.time.set_timer(CLEARTEXT, 0)
